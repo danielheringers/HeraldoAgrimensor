@@ -38,7 +38,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b">
-      <div className="container mx-auto px-4 flex justify-between items-center py-4 sm:py-0">
+      <div className="container mx-auto px-4 flex justify-between items-center py-4 sm:px-0">
         <Link href="/" className="text-lg font-bold text-[#308a51] font-libre md:text-2xl">
           Heraldo Agrimensor
         </Link>
