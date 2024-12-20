@@ -1,4 +1,5 @@
-import { Mail, MapPin, Instagram } from 'lucide-react'
+import { Mail, MapPin } from 'lucide-react'
+import { SiInstagram } from 'react-icons/si'
 
 const WhatsAppIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 258">
@@ -20,69 +21,103 @@ const WhatsAppIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-[#263238] text-white py-8">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Heraldo Agrimensor</h3>
-            <p>Serviços de agrimensura de qualidade para suas necessidades.</p>
+    <footer className="bg-[#263238] text-white py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          
+          {/* Empresa */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold font-libre text-[#308a51]">
+              Heraldo Agrimensor
+            </h3>
+            <p className="text-gray-300">
+              Serviços de agrimensura de qualidade para suas necessidades de medição e demarcação de terras.
+            </p>
           </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4">Contato</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center gap-2">
+
+          {/* Links Rápidos */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold">Links Rápidos</h3>
+            <ul className="space-y-2 smooth-scroll">
+              <li>
+                <a href="#services" className="text-gray-300 hover:text-[#308a51] transition-colors smooth-scroll">
+                  Serviços
+                </a>
+              </li>
+              <li>
+                <a href="#benefits" className="text-gray-300 hover:text-[#308a51] transition-colors smooth-scroll">
+                  Benefícios
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-gray-300 hover:text-[#308a51] transition-colors smooth-scroll">
+                  Solicitar Orçamento
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contato */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold">Contato</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2 text-gray-300">
                 <WhatsAppIcon />
                 <a
                   href="https://wa.me/5533999025847"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#308a51]"
+                  className="hover:text-[#308a51] transition-colors"
                 >
                   (33) 9 9902-5847
                 </a>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 text-gray-300">
                 <WhatsAppIcon />
                 <a
                   href="https://wa.me/5533984445755"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#308a51]"
+                  className="hover:text-[#308a51] transition-colors"
                 >
                   (33) 9 8444-5755
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-5 w-5" />
-                heraldoheringer@msn.com / heraldoheringer@gmail.com
+              <li className="flex items-start gap-2 text-gray-300">
+                <Mail className="h-5 w-5 mt-1" />
+                <div>
+                  <p>heraldoheringer@msn.com</p>
+                  <p>diovaniheringer25@gmail.com</p>
+                </div>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-5 w-5" />
-                diovaniheringer25@gmail.com
-              </li>
-              <li className="flex items-center gap-2">
-                <MapPin className="h-5 w-5" />
-                Rua Coronel Alberto Pinto Coelho, 162 - Manhuaçu, Minas Gerais.
+              <li className="flex items-start gap-2 text-gray-300">
+                <MapPin className="h-5 w-5 mt-1" />
+                <p>Rua Coronel Alberto Pinto Coelho, 162 - Manhuaçu, Minas Gerais.</p>
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4">Redes Sociais</h3>
-            <ul className="space-y-2">
-              <li>
-                <a 
-                  href="https://www.instagram.com/heraldoheringer/" 
-                  className="hover:text-[#308a51] flex items-center gap-2"
-                >
-                  <Instagram className="h-5 w-5" />
-                  Instagram
-                </a>
-              </li>
-            </ul>
+
+          {/* Newsletter */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-4 mt-4">
+              <a 
+                href="https://www.instagram.com/heraldoheringer/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-[#308a51] transition-colors"
+              >
+                <SiInstagram /> Instagram
+              </a>
+            </div>
           </div>
         </div>
-        <div className="mt-8 text-center">
-          <p>&copy; 2024 Heraldo Agrimensor. Todos os direitos reservados.</p>
+
+        <div className="border-t border-gray-700 pt-8 mt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-sm">
+              &copy; {new Date().getFullYear()} Heraldo Agrimensor. Todos os direitos reservados.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

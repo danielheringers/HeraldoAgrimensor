@@ -112,8 +112,8 @@ export default function ContactForm() {
 
   return (
     <section id="contact" className="py-20 bg-[#F5F7FA]">
-      <div className="container mx-auto max-w-2xl">
-        <h2 className="text-4xl font-bold text-center mb-8">Solicite um Orçamento</h2>
+      <div className="container mx-auto px-4 max-w-2xl sm:px-0">
+        <h2 className="text-2xl font-bold text-center mb-8 md:text-4xl">Solicite um Orçamento</h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
