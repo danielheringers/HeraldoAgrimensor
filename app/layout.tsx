@@ -1,6 +1,7 @@
 import { Nunito, Libre_Baskerville } from 'next/font/google'
 import { Toaster } from "@/components/ui/toaster"
 import './globals.css'
+import { Analytics } from "@vercel/analytics/react"
 
 const nunito = Nunito({ 
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${nunito.variable} ${libreBaskerville.variable} font-nunito`}>
         {children}
+        <Analytics />
         <Toaster />
       </body>
     </html>
