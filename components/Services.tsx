@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { MapPin, Ruler, FileText, Building, Globe, Hammer, Map, FileCheck, Scale, TreePine } from 'lucide-react'
+import { MapPin, Ruler, Globe, Hammer, Map, FileCheck } from 'lucide-react'
 
 const services = [
   {
