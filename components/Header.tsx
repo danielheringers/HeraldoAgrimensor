@@ -17,34 +17,6 @@ export default function Header() {
         <Link href="/" className="text-2xl font-bold text-[#308a51] font-libre">
           Heraldo Agrimensor
         </Link>
-        <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            <li>
-              <Link 
-                href="#services" 
-                className="text-gray-600 hover:text-[#308a51] transition-colors"
-              >
-                Serviços
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="#benefits" 
-                className="text-gray-600 hover:text-[#308a51] transition-colors"
-              >
-                Benefícios
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="#contact" 
-                className="text-gray-600 hover:text-[#308a51] transition-colors"
-              >
-                Contato
-              </Link>
-            </li>
-          </ul>
-        </nav>
         <Button 
           variant="default" 
           className="bg-[#308a51] hover:bg-[#388E3B] text-white flex items-center gap-2"
