@@ -1,7 +1,7 @@
-import { Nunito, Libre_Baskerville } from 'next/font/google'
 import { Toaster } from "@/components/ui/toaster"
-import './globals.css'
 import { Analytics } from "@vercel/analytics/react"
+import { Libre_Baskerville, Nunito } from 'next/font/google'
+import './globals.css'
 
 const nunito = Nunito({ 
   subsets: ['latin'],
@@ -15,8 +15,9 @@ const libreBaskerville = Libre_Baskerville({
 })
 
 export const metadata = {
-  title: 'Heraldo Heringer - Serviços de Agrimensura',
-  description: 'Serviços profissionais de agrimensura para suas necessidades de medição e demarcação de terras.',
+  title: 'Heraldo Heringer - Agrimensor em Manhuaçu | Georreferenciamento e Topografia',
+  description: 'Serviços profissionais de agrimensura, georreferenciamento e topografia em Manhuaçu e região. Medição e demarcação de terras com precisão e qualidade.',
+  keywords: 'agrimensor, georreferenciamento, topografia, Manhuaçu, medição de terras, demarcação de terras, loteamentos',
 }
 
 export default function RootLayout({

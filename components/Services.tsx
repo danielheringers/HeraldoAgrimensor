@@ -1,16 +1,16 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { MapPin, Ruler, Globe, Hammer, Map, FileCheck } from 'lucide-react'
+import { FileCheck, Globe, Hammer, Map, MapPin, Ruler } from 'lucide-react'
 
 const services = [
   {
     icon: <MapPin className="h-8 w-8 text-[#308a51]" />,
     title: "Levantamento Topográfico Planialtimétrico",
-    description: "Medição e representação detalhada das características do terreno, incluindo relevo e detalhes planimétricos. Essencial para projetos de construção e planejamento."
+    description: "Medição e representação detalhada das características do terreno em Manhuaçu e região, incluindo relevo e detalhes planimétricos. Essencial para projetos de construção e planejamento urbano e rural."
   },
   {
     icon: <Globe className="h-8 w-8 text-[#308a51]" />,
-    title: "Georreferenciamento de Imóveis",
-    description: "Determinação precisa dos limites de propriedades usando coordenadas geográficas, conforme normas do INCRA/SIGEF. Necessário para regularização fundiária."
+    title: "Georreferenciamento de Imóveis Rurais",
+    description: "Determinação precisa dos limites de propriedades rurais usando coordenadas geográficas, conforme normas do INCRA/SIGEF. Fundamental para regularização fundiária e certificação de imóveis rurais em Manhuaçu."
   },
   {
     icon: <Hammer className="h-8 w-8 text-[#308a51]" />,
@@ -39,6 +39,7 @@ export default function Services() {
     <section id="services" className="py-20 bg-gradient-to-b from-[#F5F7FA] to-[#E8F5E9]">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Nossos Serviços</h2>
+        <h3 className="hidden">Agrimensura em Manhuaçu</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow duration-300">

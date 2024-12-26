@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState, useCallback } from "react"
-import Image from "next/image"
+import Image_One from "@/assets/Flux_Dev_A_meticulously_detailed_land_surveyor_every_aspect_ex_0.jpeg"
+import Image_Two from "@/assets/Flux_Dev_A_meticulously_detailed_land_surveyor_every_aspect_ex_3.jpeg"
 import { Button } from "@/components/ui/button"
 import {
   Carousel,
@@ -9,8 +9,8 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel"
 import { cn } from "@/lib/utils"
-import Image_One from "@/assets/Flux_Dev_A_meticulously_detailed_land_surveyor_every_aspect_ex_0.jpeg"
-import Image_Two from "@/assets/Flux_Dev_A_meticulously_detailed_land_surveyor_every_aspect_ex_3.jpeg"
+import Image from "next/image"
+import { useCallback, useEffect, useState } from "react"
 
 
 const images = [
@@ -82,8 +82,8 @@ export default function Hero() {
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="container mx-auto text-center z-10">
-          <h1 className="text-5xl font-bold mb-4">Agrimensura de Precisão</h1>
-          <p className="text-xl mb-8">Medição e demarcação de terras com tecnologia de ponta</p>
+          <h1 className="text-5xl font-bold mb-4">Agrimensura e Georreferenciamento em Manhuaçu</h1>
+          <p className="text-xl mb-8">Serviços de topografia, medição e demarcação de terras com tecnologia de ponta</p>
           <Button size="lg" className="bg-[#308a51] hover:bg-[#388E3B] text-white" onClick={scrollToContact}>
             Solicite um Orçamento Grátis
           </Button>
