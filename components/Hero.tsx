@@ -82,7 +82,8 @@ export default function Hero() {
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="container mx-auto text-center z-10">
-          <h1 className="text-5xl font-bold mb-4">Agrimensura e Georreferenciamento em Manhuaçu</h1>
+          <h1 className="text-5xl font-bold mb-4">Agrimensura e Georreferenciamento</h1>
+          <span className="hidden">em Manhuaçu e Região</span>
           <p className="text-xl mb-8">Serviços de topografia, medição e demarcação de terras com tecnologia de ponta</p>
           <Button size="lg" className="bg-[#308a51] hover:bg-[#388E3B] text-white" onClick={scrollToContact}>
             Solicite um Orçamento Grátis
