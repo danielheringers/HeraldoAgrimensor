@@ -28,7 +28,7 @@ export default function Footer() {
           {/* Empresa */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold font-libre text-[#308a51]">
-              Heraldo Agrimensor
+              Heraldo Agrimensura
             </h3>
             <p className="text-gray-300">
               Serviços de agrimensura de qualidade para suas necessidades de medição e demarcação de terras.
@@ -99,12 +99,13 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div className="space-y-4">
-            <div className="flex items-center gap-4 mt-4">
+            <div className="flex items-center gap-4 flex-col justify-center">
+            <h3 className="text-xl font-bold">Redes Sociais</h3>
               <a 
                 href="https://www.instagram.com/heraldoheringer/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-[#308a51] transition-colors"
+                className="text-gray-300 hover:text-[#308a51] flex flex-row items-center justify-center gap-2 transition-colors"
               >
                 <SiInstagram /> Instagram
               </a>
@@ -115,7 +116,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Heraldo Agrimensor. Todos os direitos reservados.
+              &copy; {new Date().getFullYear()} Heraldo Agrimensura. Todos os direitos reservados.
             </p>
           </div>
         </div>

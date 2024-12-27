@@ -19,7 +19,7 @@ import { useCallback, useEffect, useState } from "react"
 const images = [
   {
     src: Image_One,
-    alt: "Agrimensor examinando mapa"
+    alt: "Agrimensura examinando mapa"
   },
   {
     src: Image_Two,

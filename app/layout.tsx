@@ -15,9 +15,9 @@ const libreBaskerville = Libre_Baskerville({
 })
 
 export const metadata = {
-  title: 'Heraldo Heringer - Agrimensor em Manhuaçu | Georreferenciamento e Topografia',
+  title: 'Heraldo Heringer - Agrimensura em Manhuaçu | Georreferenciamento e Topografia',
   description: 'Serviços profissionais de agrimensura, georreferenciamento e topografia em Manhuaçu e região. Medição e demarcação de terras com precisão e qualidade.',
-  keywords: 'agrimensor, georreferenciamento, topografia, Manhuaçu, medição de terras, demarcação de terras, loteamentos',
+  keywords: 'Agrimensura, georreferenciamento, topografia, Manhuaçu, medição de terras, demarcação de terras, loteamentos',
 }
 
 export default function RootLayout({

@@ -75,7 +75,7 @@ export default function Header() {
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
             <SheetHeader>
               <SheetTitle className="text-left text-[#308a51] font-libre">
-                Heraldo Agrimensor
+                Heraldo Agrimensura
               </SheetTitle>
             </SheetHeader>
             <nav className="flex flex-col gap-4 mt-8">
