@@ -1,5 +1,8 @@
 'use client'
 
+import Image_Three from "@/assets/3.jpeg"
+import Image_Four from "@/assets/4.jpeg"
+import Image_Five from "@/assets/5.jpeg"
 import Image_One from "@/assets/Flux_Dev_A_meticulously_detailed_land_surveyor_every_aspect_ex_0.jpeg"
 import Image_Two from "@/assets/Flux_Dev_A_meticulously_detailed_land_surveyor_every_aspect_ex_3.jpeg"
 import { Button } from "@/components/ui/button"
@@ -21,7 +24,20 @@ const images = [
   {
     src: Image_Two,
     alt: "Profissional de agrimensura trabalhando"
-  }
+  },
+  {
+    src: Image_Three,
+    alt: "Georreferenciamento de terrenos em Manhuaçu"
+  },
+  {
+    src: Image_Four,
+    alt: "Medição de terrenos em Manhuaçu"
+  },
+  {
+    src: Image_Five,
+    alt: "Equipamentos de Agrimensura"
+  },
+
 ]
 
 export default function Hero() {
