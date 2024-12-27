@@ -4,7 +4,7 @@ import { FileCheck, Globe, Hammer, Map, MapPin, Ruler } from 'lucide-react'
 const services = [
   {
     icon: <MapPin className="h-8 w-8 text-[#308a51]" />,
-    title: "Levantamento Topográfico Planialtimétrico",
+    title: "Levantamento Topográfico Planialtimétrico e Planimétrico ",
     description: "Medição e representação detalhada das características do terreno em Manhuaçu e região, incluindo relevo e detalhes planimétricos. Essencial para projetos de construção e planejamento urbano e rural."
   },
   {

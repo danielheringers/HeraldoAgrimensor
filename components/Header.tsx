@@ -1,9 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
-import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Menu } from 'lucide-react'
 import {
   Sheet,
   SheetContent,
@@ -11,6 +8,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { ArrowRight, Menu } from 'lucide-react'
+import Link from 'next/link'
+import { useCallback, useState } from 'react'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -40,7 +40,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white border-b">
       <div className="container mx-auto px-4 flex justify-between items-center py-4 sm:px-0">
         <Link href="/" className="text-lg font-bold text-[#308a51] font-libre md:text-2xl">
-          Heraldo Agrimensor
+          Heraldo Agrimensura
         </Link>
 
         {/* Desktop Navigation */}

@@ -1,4 +1,4 @@
-import { Users, MapPin, FileCheck, Calendar } from 'lucide-react'
+import { Calendar, FileCheck, MapPin, Users } from 'lucide-react'
 
 export default function Benefits() {
   return (
@@ -19,7 +19,7 @@ export default function Benefits() {
             <div className="p-3 bg-[#308a51]/10 rounded-full mb-4">
               <Users className="w-6 h-6 text-[#308a51]" />
             </div>
-            <span className="text-3xl font-bold mb-2">1.245</span>
+            <span className="text-3xl font-bold mb-2">+ 11.482</span>
             <span className="text-gray-600">Clientes Atendidos</span>
           </div>
 
@@ -27,7 +27,7 @@ export default function Benefits() {
             <div className="p-3 bg-[#308a51]/10 rounded-full mb-4">
               <MapPin className="w-6 h-6 text-[#308a51]" />
             </div>
-            <span className="text-3xl font-bold mb-2">71.280</span>
+            <span className="text-3xl font-bold mb-2">+ 71.280</span>
             <span className="text-gray-600">Hectares Medidos</span>
           </div>
 
@@ -35,7 +35,7 @@ export default function Benefits() {
             <div className="p-3 bg-[#308a51]/10 rounded-full mb-4">
               <FileCheck className="w-6 h-6 text-[#308a51]" />
             </div>
-            <span className="text-3xl font-bold mb-2">2.490</span>
+            <span className="text-3xl font-bold mb-2">+ 20.490</span>
             <span className="text-gray-600">Projetos Concluídos</span>
           </div>
 

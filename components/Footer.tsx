@@ -92,7 +92,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2 text-gray-300">
                 <MapPin className="h-5 w-5 mt-1" />
-                <p>Rua Coronel Alberto Pinto Coelho, 162 - Manhuaçu, Minas Gerais.</p>
+                <p>Rua Coronel Alberto Pinto Coelho, 143 - Manhuaçu, Minas Gerais.</p>
               </li>
             </ul>
           </div>
