@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image_Three from "@/assets/3.jpeg"
 import Image_Four from "@/assets/4.jpeg"
@@ -6,49 +6,56 @@ import Image_Five from "@/assets/5.jpeg"
 import Image_One from "@/assets/Flux_Dev_A_meticulously_detailed_land_surveyor_every_aspect_ex_0.jpeg"
 import Image_Two from "@/assets/Flux_Dev_A_meticulously_detailed_land_surveyor_every_aspect_ex_3.jpeg"
 import { Button } from "@/components/ui/button"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel"
+import type { CarouselApi } from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import { useCallback, useEffect, useState } from "react"
 
-
 const images = [
   {
     src: Image_One,
-    alt: "Agrimensura examinando mapa"
+    alt: "Agrimensor analisando mapa em campo",
   },
   {
     src: Image_Two,
-    alt: "Profissional de agrimensura trabalhando"
+    alt: "Profissional de agrimensura trabalhando com equipamentos",
   },
   {
     src: Image_Three,
-    alt: "Georreferenciamento de terrenos em Manhuaçu"
+    alt: "Georreferenciamento de terrenos em Manhuaçu",
   },
   {
     src: Image_Four,
-    alt: "Medição de terrenos em Manhuaçu"
+    alt: "Medição de terrenos em Manhuaçu",
   },
   {
     src: Image_Five,
-    alt: "Equipamentos de Agrimensura"
+    alt: "Equipamentos de agrimensura em operação",
   },
+]
 
+const highlights = [
+  { value: "15+", label: "Anos de experiência" },
+  { value: "+20k", label: "Projetos entregues" },
+  { value: "+70k", label: "Hectares mapeados" },
 ]
 
 export default function Hero() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [api, setApi] = useState<any>()
+  const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
 
   const scrollToContact = useCallback(() => {
-    const contactForm = document.getElementById('contact')
+    const contactForm = document.getElementById("contact")
     if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' })
+      contactForm.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [])
+
+  const scrollToServices = useCallback(() => {
+    const servicesSection = document.getElementById("services")
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" })
     }
   }, [])
 
@@ -57,20 +64,23 @@ export default function Hero() {
 
     const interval = setInterval(() => {
       api.scrollNext()
-    }, 5000)
+    }, 6000)
 
-    api.on("select", () => {
+    const onSelect = () => {
       setCurrent(api.selectedScrollSnap())
-    })
+    }
+
+    api.on("select", onSelect)
+    onSelect()
 
     return () => {
       clearInterval(interval)
-      api.destroy()
+      api.off("select", onSelect)
     }
   }, [api])
 
   return (
-    <section className="relative bg-[#263238] text-white">
+    <section id="hero" className="relative overflow-hidden bg-ink text-white">
       <Carousel
         setApi={setApi}
         className="w-full"
@@ -81,14 +91,15 @@ export default function Hero() {
       >
         <CarouselContent>
           {images.map((image, index) => (
-            <CarouselItem key={index}>
-              <div className="relative w-full h-[600px]">
+            <CarouselItem key={image.alt}>
+              <div className="relative h-[540px] w-full md:h-[650px]">
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover brightness-50"
+                  className="object-cover"
                   priority={index === 0}
+                  sizes="100vw"
                 />
               </div>
             </CarouselItem>
@@ -96,21 +107,61 @@ export default function Hero() {
         </CarouselContent>
       </Carousel>
 
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
+      <div className="pointer-events-none absolute inset-0 bg-hero-glow opacity-70" />
+      <div className="pointer-events-none absolute -left-40 top-20 h-72 w-72 animate-pulse-soft rounded-full bg-brand-500/25 blur-3xl" />
+
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="container mx-auto text-center z-10">
-          <h1 className="text-5xl font-bold mb-4">Agrimensura e Georreferenciamento</h1>
-          <span className="hidden">em Manhuaçu e Região</span>
-          <p className="text-xl mb-8">Serviços de topografia, medição e demarcação de terras com tecnologia de ponta</p>
-          <Button size="lg" className="bg-[#308a51] hover:bg-[#388E3B] text-white" onClick={scrollToContact}>
-            Solicite um Orçamento Grátis
-          </Button>
-          <div className="flex justify-center gap-2 mt-8">
+        <div className="container mx-auto px-4 text-center">
+          <div className="mx-auto max-w-3xl animate-fade-up">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+              Agrimensura • Georreferenciamento • Topografia
+            </span>
+            <h1 className="mt-6 text-4xl font-semibold leading-tight text-balance font-display md:text-6xl">
+              Precisão técnica e confiança para seu projeto em Manhuaçu e região
+            </h1>
+            <p className="mt-4 text-base text-white/80 md:text-lg">
+              Levantamentos, demarcações e regularização fundiária com tecnologia de ponta,
+              prazos claros e atendimento próximo.
+            </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button
+                size="lg"
+                className="bg-brand-600 hover:bg-brand-700 text-white shadow-glow"
+                onClick={scrollToContact}
+              >
+                Solicitar orçamento
+              </Button>
+              <Button
+                size="lg"
+                variant="ghost"
+                className="border border-white/50 bg-white/5 text-white hover:bg-white/15 hover:text-white"
+                onClick={scrollToServices}
+              >
+                Ver serviços
+              </Button>
+            </div>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-6 text-left sm:grid-cols-3">
+            {highlights.map((highlight) => (
+              <div
+                key={highlight.label}
+                className="pointer-events-auto rounded-2xl border border-white/15 bg-ink/60 px-6 py-5 text-white shadow-lg backdrop-blur"
+              >
+                <p className="text-2xl font-semibold text-white">{highlight.value}</p>
+                <p className="mt-1 text-sm text-white/80">{highlight.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 flex justify-center gap-2">
             {images.map((_, index) => (
               <div
                 key={index}
                 className={cn(
-                  "w-2 h-2 rounded-full transition-colors",
-                  current === index ? "bg-[#28CB8B]" : "bg-white/50"
+                  "h-2 w-2 rounded-full transition-colors",
+                  current === index ? "bg-brand-300" : "bg-white/40"
                 )}
               />
             ))}
@@ -120,4 +171,3 @@ export default function Hero() {
     </section>
   )
 }
-

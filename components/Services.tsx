@@ -1,56 +1,79 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { FileCheck, Globe, Hammer, Map, MapPin, Ruler } from 'lucide-react'
+﻿import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { FileCheck, Globe, Hammer, Map, MapPin, Ruler } from "lucide-react"
 
 const services = [
   {
-    icon: <MapPin className="h-8 w-8 text-[#308a51]" />,
-    title: "Levantamento Topográfico Planialtimétrico e Planimétrico ",
-    description: "Medição e representação detalhada das características do terreno em Manhuaçu e região, incluindo relevo e detalhes planimétricos. Essencial para projetos de construção e planejamento urbano e rural."
+    icon: MapPin,
+    title: "Levantamento topográfico planialtimétrico",
+    description:
+      "Medição e representação detalhada do terreno com precisão centimétrica para projetos urbanos e rurais.",
   },
   {
-    icon: <Globe className="h-8 w-8 text-[#308a51]" />,
-    title: "Georreferenciamento de Imóveis Rurais",
-    description: "Determinação precisa dos limites de propriedades rurais usando coordenadas geográficas, conforme normas do INCRA/SIGEF. Fundamental para regularização fundiária e certificação de imóveis rurais em Manhuaçu."
+    icon: Globe,
+    title: "Georreferenciamento de imóveis rurais",
+    description:
+      "Delimitação conforme INCRA/SIGEF para regularização fundiária e certificação do imóvel.",
   },
   {
-    icon: <Hammer className="h-8 w-8 text-[#308a51]" />,
-    title: "Locação de Obras",
-    description: "Transferência das dimensões e posições de projetos para o terreno. Fundamental para construções, estradas e outras obras de infraestrutura."
+    icon: Hammer,
+    title: "Locação de obras",
+    description:
+      "Transferência de projetos para o terreno com controle de níveis, alinhamentos e eixos.",
   },
   {
-    icon: <Map className="h-8 w-8 text-[#308a51]" />,
-    title: "Loteamentos e Demarcações de Terra",
-    description: "Divisão de áreas em lotes menores, definindo ruas, quadras e espaços públicos. Importante para desenvolvimento urbano e rural ordenado."
+    icon: Map,
+    title: "Loteamentos e desmembramentos",
+    description:
+      "Estudos, divisão de áreas e apoio técnico para desenvolvimento urbano ou rural ordenado.",
   },
   {
-    icon: <FileCheck className="h-8 w-8 text-[#308a51]" />,
-    title: "Regularização Fundiária",
-    description: "Processo de legalização de propriedades, garantindo conformidade com normas legais. Assegura segurança jurídica e acesso a financiamentos."
+    icon: FileCheck,
+    title: "Regularização fundiária",
+    description:
+      "Documentação e suporte técnico para garantir segurança jurídica e acesso a financiamentos.",
   },
   {
-    icon: <Ruler className="h-8 w-8 text-[#308a51]" />,
-    title: "Demarcação de Terras",
-    description: "Definição precisa de limites e divisas de propriedades, essencial para evitar conflitos e garantir o uso correto do solo."
-  }
+    icon: Ruler,
+    title: "Demarcação de terras",
+    description:
+      "Definição precisa de limites e divisas para evitar conflitos e proteger o patrimônio.",
+  },
 ]
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-[#F5F7FA] to-[#E8F5E9]">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Nossos Serviços</h2>
-        <h3 className="hidden">Agrimensura em Manhuaçu</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-[#308a51]">
-                  {service.icon}
-                  <span className="text-xl">{service.title}</span>
+    <section id="services" className="section-padding scroll-mt-24 relative overflow-hidden bg-sand">
+      <div className="pointer-events-none absolute inset-0 bg-dot-grid opacity-15 [background-size:22px_22px]" />
+      <div className="container relative mx-auto px-4">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-600">
+            Serviços
+          </span>
+          <h2 className="mt-4 text-4xl font-semibold text-balance text-ink font-display">
+            Soluções completas em agrimensura e topografia
+          </h2>
+          <p className="mt-4 text-base text-ink/70">
+            Atendimento técnico e consultivo para todas as etapas do seu projeto, da análise inicial à
+            entrega final.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <Card
+              key={service.title}
+              className="group border-white/50 bg-white/90 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <CardHeader className="flex flex-row items-center gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-100 text-brand-600">
+                  <service.icon className="h-6 w-6" />
+                </div>
+                <CardTitle className="text-lg font-semibold text-ink">
+                  {service.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600">{service.description}</CardDescription>
+              <CardContent className="text-sm text-ink/70">
+                {service.description}
               </CardContent>
             </Card>
           ))}
@@ -59,4 +82,3 @@ export default function Services() {
     </section>
   )
 }
-
